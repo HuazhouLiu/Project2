@@ -43,9 +43,6 @@ router.get("/:order_id/delete", async function (req, res) {
 });
 
 //display add form
-// router.get("/add", async function (req, res) {
-//   res.render("orderForm", { title: "Add an order", order: null });
-// });
 router.get("/add", async function (req, res) {
   const order = { order_id: "", order_date: "", total_amount: "", customer_id: "" };
   res.render("orderForm", { title: "Add an order", order });

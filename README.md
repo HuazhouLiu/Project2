@@ -22,7 +22,9 @@ node P5Queries/query5.js
 
 ## To run the node app
 
+```bash
 npm install
 npm start
 http://localhost:3000
 http://localhost:3000/customer
+```
