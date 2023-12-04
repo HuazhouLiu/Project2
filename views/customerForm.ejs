@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+
+  <% if (customer) { %>
+  <form action="/customer/<%=customer.customer_id%>/edit" method="post">
+    <div>
+      <label>Customer Id: <output><%= customer.customer_id %></output> </label>
+    </div>
+    <div>
+      <label>Fisrt Name: <input type="text" id="first_name" name="first_name" value="<%= customer.first_name%>" required> </label>
+    </div>
+    <div>
+      <label>Last Name: <input type="text" id="last_name" name="last_name" value="<%= customer.last_name%>" required> </label>
+    </div>
+    <div>
+      <label>Email: <input type="text" id="email" name="email" value="<%= customer.email%>" required> </label>
+    </div>
+    <div>
+      <label>Phone: <input type="text" id="phone" name="phone" value="<%= customer.phone%>" required> </label>
+    </div>
+    <div>
+      <label>Address: <input type="text" id="address" name="address" value="<%= customer.address%>" required> </label>
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+  <% } else {%>
+    <form action="/customer/add" method="post">
+      <div>
+        <label>Customer Id: <output><%= customer.customer_id %></output> </label>
+      </div>
+      <div>
+        <label>Fisrt Name: <input type="text" id="first_name" name="first_name" value="<%= customer.first_name%>" required> </label>
+      </div>
+      <div>
+        <label>Last Name: <input type="text" id="last_name" name="last_name" value="<%= customer.last_name%>" required> </label>
+      </div>
+      <div>
+        <label>Email: <input type="text" id="email" name="email" value="<%= customer.email%>" required> </label>
+      </div>
+      <div>
+        <label>Phone: <input type="text" id="phone" name="phone" value="<%= customer.phone%>" required> </label>
+      </div>
+      <div>
+        <label>Address: <input type="text" id="address" name="address" value="<%= customer.address%>" required> </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  <% }%>
+
+</body>
+
+</html>

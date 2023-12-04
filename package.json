@@ -1,11 +1,26 @@
 {
   "name": "project2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Link to ERD: https://lucid.app/lucidchart/c851940a-4834-4f33-8e79-e1b667cee303/edit?viewport_loc=-961%2C-940%2C3320%2C1450%2C0_0&invitationId=inv_5b91520f-53e6-4eb1-b6e6-d10419aea24f",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./node_modules/nodemon/bin/nodemon.js ./bin/www"
   },
+  "dependencies": {
+    "mongodb": "^6.3.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  },
+  "main": "app.js",
   "author": "",
   "license": "ISC"
 }

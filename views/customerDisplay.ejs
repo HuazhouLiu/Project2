@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <div>
+    <a type="button" href="/customer/add">Add Customer</a>
+    <a type="button" href="/"></a>
+  </div>
+
+  <div>
+    <% customers.forEach(function(customer){ %>
+      <div>
+        <div>
+          <label>Customer Id: <output><%= customer.customer_id %></output> </label>
+        </div>
+        <label> First Name: <output><%= customer.first_name %></output> </label>
+        <label> Last Name: <output><%= customer.last_name %></output> </label>
+        <label> Email: <output><%= customer.email %></output> </label>
+        <label> Phone: <output><%= customer.phone %></output> </label>
+        <label> Address: <output><%= customer.address %></output> </label>
+        <div>
+          <a type="button" href="/customer/<%= customer.customer_id%>/edit">Edit</a>
+          <a type="button" href="/customer/<%= customer.customer_id%>/delete">Delete</a>
+        </div>
+      </div>
+      <hr />
+    <% }); %>
+  </div>
+</body>
+
+</html>
